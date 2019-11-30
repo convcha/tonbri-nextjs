@@ -19,6 +19,7 @@
     "@types/node": "^12.12.14",
     "@types/react": "latest",
     "@types/react-dom": "latest",
+    "prettier": "^1.19.1",
     "typescript": "latest"
   }
 }
