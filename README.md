@@ -1,28 +1,29 @@
-# Next.js with TypeScript example
+# tonbri
 
-## How to use
+## Development
 
-Download the example [or clone the repo](https://github.com/mui-org/material-ui):
-
-```sh
-curl https://codeload.github.com/mui-org/material-ui/tar.gz/master | tar -xz --strip=2  material-ui-master/examples/nextjs-with-typescript
-cd nextjs-with-typescript
+```
+$ yarn dev
 ```
 
-Install it and run:
+### Commit Message Guidelines
 
-```sh
-npm install
-npm run dev
+#### Commit Message Format
+
+```
+<type>: <subject>
 ```
 
-or
+#### Type
 
-```sh
-yarn
-yarn dev
-```
+Must be one of the following:
 
-## The idea behind the example
-
-[Next.js](https://github.com/zeit/next.js) is a framework for server-rendered React apps.
+* **build**: Changes that affect the build system or external dependencies (example scopes: gulp, broccoli, npm)
+* **ci**: Changes to our CI configuration files and scripts (example scopes: Circle, BrowserStack, SauceLabs)
+* **docs**: Documentation only changes
+* **feat**: A new feature
+* **fix**: A bug fix
+* **perf**: A code change that improves performance
+* **refactor**: A code change that neither fixes a bug nor adds a feature
+* **style**: Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)
+* **test**: Adding missing tests or correcting existing tests
