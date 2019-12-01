@@ -16,6 +16,20 @@ const theme = createMuiTheme({
     background: {
       default: "#fff"
     }
+  },
+  typography: {
+    fontFamily: [
+      "-apple-system",
+      '"BlinkMacSystemFont"',
+      '"Helvetica Neue"',
+      "Helvetica",
+      "Arial",
+      '"Hiragino Sans"',
+      '"Hiragino Kaku Gothic ProN"',
+      '"Meiryo"',
+      '"Segoe UI Symbol"',
+      "sans-serif"
+    ].join(",")
   }
 });
 

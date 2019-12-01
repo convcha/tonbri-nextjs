@@ -3,8 +3,10 @@ import App from "next/app";
 import Head from "next/head";
 import { ThemeProvider } from "@material-ui/core/styles";
 import CssBaseline from "@material-ui/core/CssBaseline";
+import { Layout } from "../src/components/Layout";
 import theme from "../src/theme";
 
+// noinspection JSUnusedGlobalSymbols
 export default class MyApp extends App {
   componentDidMount() {
     // Remove the server-side injected CSS.
@@ -25,7 +27,9 @@ export default class MyApp extends App {
         <ThemeProvider theme={theme}>
           {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
           <CssBaseline />
-          <Component {...pageProps} />
+          <Layout pageProps={pageProps}>
+            <Component {...pageProps} />
+          </Layout>
         </ThemeProvider>
       </React.Fragment>
     );
