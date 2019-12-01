@@ -270,7 +270,7 @@ export function AppBar() {
           <div className={classes.sectionDesktop}>
             <div className={classes.search}>
               <div className={classes.searchIcon}>
-                <SearchIcon />
+                <SearchIcon color="disabled" />
               </div>
               <OutlinedInput
                 placeholder="検索"
