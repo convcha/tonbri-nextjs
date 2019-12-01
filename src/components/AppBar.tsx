@@ -249,7 +249,7 @@ export function AppBar() {
         <Toolbar>
           <Typography
             className={classes.title}
-            variant="h6"
+            variant="h5"
             color="secondary"
             noWrap
           >
