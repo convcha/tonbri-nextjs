@@ -1,3 +1,4 @@
+import Avatar from "@material-ui/core/Avatar";
 import Tab from "@material-ui/core/Tab";
 import Tabs from "@material-ui/core/Tabs";
 import React from "react";
@@ -20,7 +21,6 @@ import { AccountCircle } from "@material-ui/icons";
 import SearchIcon from "@material-ui/icons/Search";
 import MailIcon from "@material-ui/icons/Mail";
 import NotificationsIcon from "@material-ui/icons/Notifications";
-import MoreIcon from "@material-ui/icons/MoreVert";
 import { SplitButton } from "./SplitButton";
 
 const AntTabs = withStyles({
@@ -86,6 +86,9 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     menuButton: {
       marginRight: theme.spacing(2)
+    },
+    iconButtonAvatar: {
+      padding: 4
     },
     title: {
       marginRight: 30,
@@ -192,8 +195,13 @@ export function AppBar() {
       open={isMenuOpen}
       onClose={handleMenuClose}
     >
-      <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
-      <MenuItem onClick={handleMenuClose}>My account</MenuItem>
+      <MenuItem onClick={handleMenuClose}>プロフィール</MenuItem>
+      <MenuItem onClick={handleMenuClose}>記事一覧</MenuItem>
+      <MenuItem onClick={handleMenuClose}>下書き一覧</MenuItem>
+      <MenuItem onClick={handleMenuClose}>設定</MenuItem>
+      <MenuItem onClick={handleMenuClose}>ヘルプ</MenuItem>
+      <MenuItem onClick={handleMenuClose}>メンバー管理</MenuItem>
+      <MenuItem onClick={handleMenuClose}>ログアウト</MenuItem>
     </Menu>
   );
 
@@ -297,8 +305,9 @@ export function AppBar() {
               aria-haspopup="true"
               onClick={handleProfileMenuOpen}
               color="inherit"
+              className={classes.iconButtonAvatar}
             >
-              <AccountCircle />
+              <Avatar alt="devilune" src="avatar.jpg" />
             </IconButton>
           </div>
           <div className={classes.sectionMobile}>
@@ -309,7 +318,7 @@ export function AppBar() {
               onClick={handleMobileMenuOpen}
               color="inherit"
             >
-              <MoreIcon />
+              <Avatar alt="devilune" src="avatar.jpg" />
             </IconButton>
           </div>
         </Toolbar>
