@@ -21,6 +21,7 @@ import { AccountCircle } from "@material-ui/icons";
 import SearchIcon from "@material-ui/icons/Search";
 import MailIcon from "@material-ui/icons/Mail";
 import NotificationsIcon from "@material-ui/icons/Notifications";
+import Link from "../Link";
 import { SplitButton } from "./SplitButton";
 
 const AntTabs = withStyles({
@@ -255,14 +256,16 @@ export function AppBar() {
         className={classes.appBar}
       >
         <Toolbar>
-          <Typography
-            className={classes.title}
-            variant="h5"
-            color="secondary"
-            noWrap
-          >
-            Tonbri
-          </Typography>
+          <Link href="/" underline="none">
+            <Typography
+              className={classes.title}
+              variant="h5"
+              color="secondary"
+              noWrap
+            >
+              Tonbri
+            </Typography>
+          </Link>
           <AntTabs
             value={0}
             indicatorColor="primary"

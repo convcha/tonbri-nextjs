@@ -124,7 +124,12 @@ export default function Index() {
         >
           <Divider />
           {logs.map(log => (
-            <Link href="/about" key={log.primaryText}>
+            <Link
+              href="/article"
+              key={log.primaryText}
+              underline="none"
+              color="inherit"
+            >
               <div>
                 <ListItem dense button>
                   <Avatar src={log.avatarUrl} className={classes.avatar} />
